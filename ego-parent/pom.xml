@@ -1,11 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ego</groupId>
 	<artifactId>ego-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<servlet-version>3.0.1</servlet-version>
 		<jsp-version>2.2</jsp-version>
 		<jstl-version>1.2</jstl-version>
@@ -25,15 +30,68 @@
 		<ftpclient-version>3.3</ftpclient-version>
 		<solrj-version>5.3.1</solrj-version>
 		<httpclient-version>4.4.1</httpclient-version>
-		<myredis-version>0.0.1-SNAPSHOT</myredis-version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<!-- redis依赖 -->
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-pojo</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-service-impl</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-commons</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-manage</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-portal</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-item</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>com.ego</groupId>
 				<artifactId>ego-redis</artifactId>
-				<version>${myredis-version}</version>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-search</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-passport</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-cart</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ego</groupId>
+				<artifactId>ego-order</artifactId>
+				<version>${project.version}</version>
 			</dependency>
 			<!-- httpclient -->
 			<dependency>

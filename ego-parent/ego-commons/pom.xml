@@ -26,7 +26,6 @@
 		<dependency>
 			<groupId>com.ego</groupId>
 			<artifactId>ego-pojo</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- servlet -->
 		<dependency>

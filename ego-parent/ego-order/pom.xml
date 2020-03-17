@@ -17,7 +17,6 @@
 		<dependency>
 			<groupId>com.ego</groupId>
 			<artifactId>ego-redis</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- 分页插件 -->
 		<dependency>
@@ -28,7 +27,6 @@
 		<dependency>
 			<groupId>com.ego</groupId>
 			<artifactId>ego-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- jedis -->
 		<dependency>
