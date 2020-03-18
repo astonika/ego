@@ -16,7 +16,7 @@ public class TbItemParamItemDubboServiceImpl  implements TbItemParamItemDubboSer
 	public TbItemParamItem selByItemid(long itemId) {
 		TbItemParamItemExample example = new TbItemParamItemExample();
 		example.createCriteria().andItemIdEqualTo(itemId);
-		List<TbItemParamItem> list = tbItemParamItemMapper.selectByExampleWithBLOBs(example);
+		List<TbItemParamItem> list = tbItemParamItemMapper.selectByExample(example);
 		if(list!=null&&list.size()>0)
 			return list.get(0);
 		return null;

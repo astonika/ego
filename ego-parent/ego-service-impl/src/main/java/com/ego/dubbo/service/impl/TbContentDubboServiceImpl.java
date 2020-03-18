@@ -22,7 +22,7 @@ public class TbContentDubboServiceImpl implements TbContentDubboService {
 		if(categoryId!=0){
 			example.createCriteria().andCategoryIdEqualTo(categoryId);
 		}
-		List<TbContent> list = tbContentMapper.selectByExampleWithBLOBs(example);
+		List<TbContent> list = tbContentMapper.selectByExample(example);
 		
 		PageInfo<TbContent> pi = new PageInfo<>(list);
 		
@@ -44,11 +44,11 @@ public class TbContentDubboServiceImpl implements TbContentDubboService {
 		}
 		if(count!=0){
 			PageHelper.startPage(1, count);
-			List<TbContent> list = tbContentMapper.selectByExampleWithBLOBs(example);
+			List<TbContent> list = tbContentMapper.selectByExample(example);
 			PageInfo<TbContent> pi = new PageInfo<>(list);
 			return pi.getList();
 		}else{
-			return tbContentMapper.selectByExampleWithBLOBs(example);
+			return tbContentMapper.selectByExample(example);
 		}
 	}
 

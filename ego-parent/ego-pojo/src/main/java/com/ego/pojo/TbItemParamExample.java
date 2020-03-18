@@ -12,7 +12,7 @@ public class TbItemParamExample {
     protected List<Criteria> oredCriteria;
 
     public TbItemParamExample() {
-        oredCriteria = new ArrayList<Criteria>();
+        oredCriteria = new ArrayList<>();
     }
 
     public void setOrderByClause(String orderByClause) {
@@ -69,7 +69,7 @@ public class TbItemParamExample {
 
         protected GeneratedCriteria() {
             super();
-            criteria = new ArrayList<Criterion>();
+            criteria = new ArrayList<>();
         }
 
         public boolean isValid() {
@@ -225,6 +225,76 @@ public class TbItemParamExample {
             return (Criteria) this;
         }
 
+        public Criteria andParamDataIsNull() {
+            addCriterion("param_data is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataIsNotNull() {
+            addCriterion("param_data is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataEqualTo(String value) {
+            addCriterion("param_data =", value, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataNotEqualTo(String value) {
+            addCriterion("param_data <>", value, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataGreaterThan(String value) {
+            addCriterion("param_data >", value, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataGreaterThanOrEqualTo(String value) {
+            addCriterion("param_data >=", value, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataLessThan(String value) {
+            addCriterion("param_data <", value, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataLessThanOrEqualTo(String value) {
+            addCriterion("param_data <=", value, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataLike(String value) {
+            addCriterion("param_data like", value, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataNotLike(String value) {
+            addCriterion("param_data not like", value, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataIn(List<String> values) {
+            addCriterion("param_data in", values, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataNotIn(List<String> values) {
+            addCriterion("param_data not in", values, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataBetween(String value1, String value2) {
+            addCriterion("param_data between", value1, value2, "paramData");
+            return (Criteria) this;
+        }
+
+        public Criteria andParamDataNotBetween(String value1, String value2) {
+            addCriterion("param_data not between", value1, value2, "paramData");
+            return (Criteria) this;
+        }
+
         public Criteria andCreatedIsNull() {
             addCriterion("created is null");
             return (Criteria) this;
@@ -346,8 +416,9 @@ public class TbItemParamExample {
         }
     }
 
+    /**
+     */
     public static class Criteria extends GeneratedCriteria {
-
         protected Criteria() {
             super();
         }

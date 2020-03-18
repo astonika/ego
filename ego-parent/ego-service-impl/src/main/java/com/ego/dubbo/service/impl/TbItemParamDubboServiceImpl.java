@@ -24,7 +24,7 @@ public class TbItemParamDubboServiceImpl implements TbItemParamDubboService{
 		
 		//如果表中有一个或一个以上的列是text类型. 生成的方法xxxxxxxxWithBlobs()
 		//如果使用xxxxWithBlobs() 查询结果中包含带有text类的列,如果没有使用withblobs() 方法不带有text类型.
-		List<TbItemParam> list = tbItemParamMapper.selectByExampleWithBLOBs(new TbItemParamExample());
+		List<TbItemParam> list = tbItemParamMapper.selectByExample(new TbItemParamExample());
 		//根据程序员自己编写的SQL语句结合分页插件产生最终结果,封装到PageInfo
 		PageInfo<TbItemParam> pi = new PageInfo<>(list);
 		//设置方法返回结果
@@ -51,7 +51,7 @@ public class TbItemParamDubboServiceImpl implements TbItemParamDubboService{
 	public TbItemParam selByCatid(long catId) {
 		TbItemParamExample example = new TbItemParamExample();
 		example.createCriteria().andItemCatIdEqualTo(catId);
-		List<TbItemParam> list = tbItemParamMapper.selectByExampleWithBLOBs(example);
+		List<TbItemParam> list = tbItemParamMapper.selectByExample(example);
 		if(list!=null&&list.size()>0){
 			//要求每个类目只能有一个模板
 			return list.get(0);

@@ -2,11 +2,12 @@ package com.ego.mapper;
 
 import com.ego.pojo.TbOrderShipping;
 import com.ego.pojo.TbOrderShippingExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface TbOrderShippingMapper {
-    int countByExample(TbOrderShippingExample example);
+    long countByExample(TbOrderShippingExample example);
 
     int deleteByExample(TbOrderShippingExample example);
 

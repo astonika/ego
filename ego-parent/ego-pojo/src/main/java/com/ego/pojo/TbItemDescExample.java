@@ -12,7 +12,7 @@ public class TbItemDescExample {
     protected List<Criteria> oredCriteria;
 
     public TbItemDescExample() {
-        oredCriteria = new ArrayList<Criteria>();
+        oredCriteria = new ArrayList<>();
     }
 
     public void setOrderByClause(String orderByClause) {
@@ -69,7 +69,7 @@ public class TbItemDescExample {
 
         protected GeneratedCriteria() {
             super();
-            criteria = new ArrayList<Criterion>();
+            criteria = new ArrayList<>();
         }
 
         public boolean isValid() {
@@ -162,6 +162,76 @@ public class TbItemDescExample {
 
         public Criteria andItemIdNotBetween(Long value1, Long value2) {
             addCriterion("item_id not between", value1, value2, "itemId");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescIsNull() {
+            addCriterion("item_desc is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescIsNotNull() {
+            addCriterion("item_desc is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescEqualTo(String value) {
+            addCriterion("item_desc =", value, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescNotEqualTo(String value) {
+            addCriterion("item_desc <>", value, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescGreaterThan(String value) {
+            addCriterion("item_desc >", value, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescGreaterThanOrEqualTo(String value) {
+            addCriterion("item_desc >=", value, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescLessThan(String value) {
+            addCriterion("item_desc <", value, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescLessThanOrEqualTo(String value) {
+            addCriterion("item_desc <=", value, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescLike(String value) {
+            addCriterion("item_desc like", value, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescNotLike(String value) {
+            addCriterion("item_desc not like", value, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescIn(List<String> values) {
+            addCriterion("item_desc in", values, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescNotIn(List<String> values) {
+            addCriterion("item_desc not in", values, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescBetween(String value1, String value2) {
+            addCriterion("item_desc between", value1, value2, "itemDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemDescNotBetween(String value1, String value2) {
+            addCriterion("item_desc not between", value1, value2, "itemDesc");
             return (Criteria) this;
         }
 
@@ -286,8 +356,9 @@ public class TbItemDescExample {
         }
     }
 
+    /**
+     */
     public static class Criteria extends GeneratedCriteria {
-
         protected Criteria() {
             super();
         }
